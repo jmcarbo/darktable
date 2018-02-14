@@ -20,4 +20,4 @@ RUN xrdp-keygen xrdp /etc/xrdp/rsakeys.ini
 
 EXPOSE 3389
 
-CMD for i in $(seq 1 20); do useradd -m -p $(echo ${USER_PASSWORD:=password} |openssl passwd -1 -stdin) user$i; done && xrdp-sesman && xrdp -nodaemon
+CMD for i in $(seq 1 30); do useradd -m -p $(echo ${USER_PASSWORD:=password} |openssl passwd -1 -stdin) user$i; done && xrdp-sesman && xrdp -nodaemon
