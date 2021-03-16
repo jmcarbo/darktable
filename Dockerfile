@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-
+LABEL org.opencontainers.image.source https://github.com/jmcarbo/darktable
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get -y update \ 
